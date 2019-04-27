@@ -4,6 +4,15 @@
 
 ---
 
+1. [Development](#development)
+2. [Adding sprites](#adding-sprites)
+3. [Loading images](#loading-images)
+4. [Tips and tricks](#tips-and-tricks)
+5. [Resources](#resources)
+6. [Starting a project from scratch](#starting-a-project-from-scratch)
+
+---
+
 ## Development
 
 Run `node -v` to check if you have [node.js](https://nodejs.org/en/) installed. If not download and install it, then you might want to restart your computer.
