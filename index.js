@@ -9,6 +9,7 @@ const sceneHeight = height * 2;
 
 let player;
 let city;
+let bg;
 
 /**
  * Preload funtion
@@ -38,6 +39,21 @@ function setup() {
     );
 
     playerAnimation.offY = 18; // ?
+
+    bg = new Group();
+
+    //create some background for visual reference
+    for (let i = 0; i < 80; i++) {
+        // Create rock sprite for background at a random location
+        const rock = createSprite(
+            random(-width, sceneWidth + width),
+            random(-height, sceneHeight + height)
+        );
+
+        //cycles through rocks 0 1 2
+        rock.addAnimation('normal', `assets/rocks${i % 3}.png`);
+        bg.add(rock);
+    }
 }
 
 /**
@@ -83,11 +99,11 @@ function draw() {
         player.position.y = sceneHeight;
     }
 
-    drawSprites();
-
     // Withithout this the background moves with the mouse
     // camera.off();
     image(city, 0, 0, sceneWidth, sceneHeight);
+
+    drawSprites();
 
     // Player shadow 
     noStroke();
