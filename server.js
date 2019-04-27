@@ -10,7 +10,7 @@ const params = {
     // Load browser on start
     open: true,
     // Directories to ignore (comma, separated)
-    ignore: 'node_modules, .git, README.md',
+    ignore: 'node_modules, .git/*, README.md',
     // file: "index.html",
     // Delay reload to wait for files to update
     wait: 1000,
