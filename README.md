@@ -21,7 +21,7 @@ If everything is working you'll see a green creature thing move with your mouse 
 
 ---
 
-## Adding sprites/characters/objects
+## Adding sprites
 
 Create a sprite animation by making a series of images whose filename ends in sequential numbers to the `assets` directory.
 
