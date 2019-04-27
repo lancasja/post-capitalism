@@ -104,3 +104,9 @@ function draw() {
 > [itch.io](https://itch.io/game-assets/free)
 
 > [opengameart.org](https://opengameart.org/)
+
+### Library references
+
+> [P5.js](https://p5js.org/reference/)
+
+> [P5.play](http://molleindustria.github.io/p5.play/)
