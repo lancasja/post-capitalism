@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["art", "new media", "game", "processing", "gray area", "creative", "coding"],
+  "author": "Jonathan Lancaster",
   "license": "ISC",
   "devDependencies": {
     "live-server": "^1.2.1"

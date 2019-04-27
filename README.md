@@ -110,3 +110,23 @@ function draw() {
 > [P5.js](https://p5js.org/reference/)
 
 > [P5.play](http://molleindustria.github.io/p5.play/)
+
+> [Morpher.js](https://jembezmamy.github.io/morpher-js/demos.html)
+
+### Inspiration
+
+> [We Make Money Not Art](http://we-make-money-not-art.com/)
+
+> [Post-capitalist design](https://medium.com/@awright249/post-capitalist-design-ff044cb1d195)
+
+> [A New Art Project Imagines a Post-capitalist World and Reimagines Museums](https://nonprofitquarterly.org/2017/06/19/new-art-project-imagines-post-capitalist-world-reimagines-museums/)
+
+> [ICOs: The Beginning Of Post-Capitalism? Some Say Yes — Here’s Why](https://medium.com/the-mission/icos-the-beginning-of-post-capitalism-some-say-yes-heres-why-564c8395dc08)
+
+> [Music and the Decline of Capitalism](https://socialistrevolution.org/music-and-the-decline-of-capitalism)
+
+> [Paul Mason: "PostCapitalism" | Talks at Google](https://www.youtube.com/watch?v=cQyr9l22fLE&feature=youtu.be)
+
+> [We're Living Through a Rare Economic Transformation](https://www.peakprosperity.com/blog/81365/peter-drucker-post-capitalist-economic-transformation)
+
+> [Five postcapitalist projects that offer a blueprint for a new world](https://www.huckmag.com/perspectives/five-postcapitalist-projects-offer-blueprint-new-world/)
