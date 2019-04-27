@@ -26,34 +26,34 @@ If everything is working you'll see a green creature thing move with your mouse 
 Create a sprite animation by making a series of images whose filename ends in sequential numbers to the `assets` directory.
 
 ```
-player_standing0001.png
-player_standing0002.png
-player_standing0003.png
-player_standing0004.png
-player_standing0005.png
-player_standing0006.png
-player_standing0007.png
+sprite_action0001.png
+sprite_action0002.png
+sprite_action0003.png
+sprite_action0004.png
+sprite_action0005.png
+sprite_action0006.png
+sprite_action0007.png
 ```
 
 Make a global variable at the top of `index.js`.   
 ```
-let player;
+let sprite;
 ```
 
 Create a sprite for the character in the `setup()` function.
 ```
 function setup() {
     ...
-    player = createSprite(400, 200, 50, 100);
+    sprite = createSprite(400, 200, 50, 100);
 }
 ```
 
  Create and add animation to the sprite with the assets you loaded.
  ```
- const playerAnimation = player.addAnimation(
-    'floating', // label
-    'assets/player_standing0001.png', // path to first frame
-    'assets/player_standing0007.png' // path last frame
+ const spriteAnimation = sprite.addAnimation(
+    'action', // label
+    'assets/sprite_action0001.png', // path to first frame
+    'assets/sprite_action0007.png' // path last frame
 );
 ```
 
@@ -66,6 +66,31 @@ function draw() {
     ...
 
     // Draw a specific sprite
-    drawSprite(player);
+    drawSprite(sprite);
 }
 ```
+
+---
+
+## Loading images
+
+Create a global variable at the top of `index.js` to hold the image.
+```
+let image;
+```
+
+Assign it a path to an image in `assets` inside the `preload()` function.
+```
+function preload() {
+    ...
+    image = loadImage('assets/image_file_name.ext');
+}
+```
+
+Put the image on the canvas with the `image()` function inside `draw()`. Put if before other assets if you want it to be in the background.
+```
+function draw() {
+    image(image, x, y, width, height);
+}
+```
+

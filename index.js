@@ -26,9 +26,6 @@ function preload() {
 function setup() {
     createCanvas(width, height);
 
-    // Background
-    image(city, 0, 0, width, height);
-
     // Create a sprite
     // (x, y, width, height)
     player = createSprite(400, 200, 50, 100);
