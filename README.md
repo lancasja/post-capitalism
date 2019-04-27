@@ -95,3 +95,12 @@ function draw() {
 }
 ```
 
+---
+
+## Resources
+
+### Free sprite sheets
+
+> [itch.io](https://itch.io/game-assets/free)
+
+> [opengameart.org](https://opengameart.org/)
