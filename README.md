@@ -87,7 +87,8 @@ function preload() {
 }
 ```
 
-Put the image on the canvas with the `image()` function inside `draw()`. Put if before other assets if you want it to be in the background.
+Put the image on the canvas with the `image()` function inside `draw()`.
+Put if before other assets if you want it to be in the background.
 ```
 function draw() {
     image(image, x, y, width, height);
