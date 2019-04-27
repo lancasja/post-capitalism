@@ -9,13 +9,16 @@ const sceneHeight = height * 2;
 
 let player;
 let city;
-let bg;
+let score = 0;
+//let bg;
+let collectibles;
 
 /**
  * Preload funtion
  * - Load assets before anything starts
  */
 function preload() {
+    bkg = loadImage('assets/bg.jpg');
     city = loadImage('assets/NorthBroadSt_Landscape.jpg');
 }
 
@@ -34,27 +37,28 @@ function setup() {
     // Create an animation
     const playerAnimation = player.addAnimation(
         'floating', // label
-        'assets/player_standing0001.png', // path to first frame
-        'assets/player_standing0007.png' // path last frame
+        'assets/player01.png', // path to first frame
+        'assets/player32.png' // path last frame
     );
 
     playerAnimation.offY = 18; // ?
 
-    bg = new Group();
+    collectibles = new Group();
+    //bg = new Group();
 
     //create some background for visual reference
     for (let i = 0; i < 80; i++) {
-        // Create rock sprite for background at a random location
-        const rock = createSprite(
+        // Create salt fat acid heat (sfah) sprite for background at a random location
+        const sfah = createSprite(
             random(-width, sceneWidth + width),
             random(-height, sceneHeight + height)
         );
 
-        // Add rock assets
-        rock.addAnimation('normal', `assets/rocks${i % 3}.png`);
+        // Add sfah assets
+        sfah.addAnimation('normal', `assets/thing${i % 7}.png`);
 
         // Add to background group (can only add sprites to groups)
-        bg.add(rock);
+        collectibles.add(sfah);
     }
 }
 
@@ -64,7 +68,7 @@ function setup() {
  * - Default frameRate is 60fps
  */
 function draw() {
-    background(255);
+    background(bkg);
 
     /**
      * Player follows mouse
@@ -88,26 +92,28 @@ function draw() {
     if (player.position.x < 0) {
         player.position.x = 0;
     }
-    
+
     if (player.position.y < 0) {
         player.position.y = 0;
     }
-    
+
     if (player.position.x > sceneWidth) {
         player.position.x = sceneWidth;
     }
-    
+
     if (player.position.y > sceneHeight) {
         player.position.y = sceneHeight;
     }
 
     // Withithout this the background moves with the mouse
     // camera.off();
-    image(city, 0, 0, sceneWidth, sceneHeight);
+    //image(city, 0, 0, sceneWidth, sceneHeight);
+
+   player.overlap(collectibles, collect);
 
     drawSprites();
 
-    // Player shadow 
+    // Player shadow
     noStroke();
     fill(0, 0, 0, 20);
     ellipse(player.position.x, player.position.y + 90, 80, 30);
@@ -115,3 +121,20 @@ function draw() {
     // Player on top
     drawSprite(player);
 }
+// call function to remove objects
+function collect(collector, collected)
+{
+  //collector is another name for asterisk
+  //show the animation
+  //collector.changeAnimation('stretch');
+  //collector.animation.rewind();
+  //collected is the sprite in the group collectibles that triggered
+  //the event
+  collected.remove();
+}
+function drawScore() {
+    ctx.font = "16px Arial";
+    ctx.fillStyle = "#0095DD";
+    ctx.fillText("Score: "+score, 8, 20);
+}
+drawScore();
