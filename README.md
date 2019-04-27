@@ -97,6 +97,19 @@ function draw() {
 
 ---
 
+## Tips and tricks:
+
+- Format documents (`option + shift + F` in VSCode)
+- Check `package.json` for how to get things running
+- Use the VSCode terminal if you're using VSCode (`command + ~`)
+- Node and `live-server` makes life easier
+- Useful VSCode extensions
+  - [HTML Snippets](https://marketplace.visualstudio.com/items?itemName=abusaidm.html-snippets)
+  - [p5js Snippets](https://marketplace.visualstudio.com/items?itemName=acidic9.p5js-snippets)
+  - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+---
+
 ## Resources
 
 ### Free sprite sheets
@@ -130,3 +143,116 @@ function draw() {
 > [We're Living Through a Rare Economic Transformation](https://www.peakprosperity.com/blog/81365/peter-drucker-post-capitalist-economic-transformation)
 
 > [Five postcapitalist projects that offer a blueprint for a new world](https://www.huckmag.com/perspectives/five-postcapitalist-projects-offer-blueprint-new-world/)
+
+---
+
+## Starting a project from scratch
+
+`cd [working/directory]`
+
+`./mkdir [project-name]`
+
+`cd [project-name]`
+
+`npm init -y`
+
+`npm i -D live-server`
+
+`touch server.js index.js index.html style.css lib`
+Download [**P5.js**](https://p5js.org/download/) and [**P5.play**](http://molleindustria.github.io/p5.play/) libraries and put into `lib` directory.
+
+Open `server.js` and paste the following:
+```
+const liveServer = require("live-server");
+
+const params = {
+    // Port number
+    port: 8181,
+    // Host IP, 127.0.0.1 is localhost
+    host: "127.0.0.1",
+    // Main directory
+    root: "./",
+    // Load browser on start
+    open: true,
+    // Directories to ignore (comma, separated)
+    ignore: 'node_modules',
+    // file: "index.html",
+    // Delay reload to wait for files to update
+    wait: 1000,
+    // 0 = errors only, 1 = some, 2 = lots
+    logLevel: 2,
+};
+
+liveServer.start(params);
+```
+
+Open `index.html` and paste the following:
+```
+<html lang="en">
+<head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8">
+    
+    <!-- Pevent the double-tap zoom on mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title in browser tab -->
+    <title>Post Capitalism</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+    
+    <!--                         -->
+    <!-- JavaScript dependencies -->
+    <!--                         -->
+    
+    <!-- P5.js -->
+    <script src="lib/p5/p5.min.js"></script>
+    <script src="lib/p5/addons/p5.dom.min.js"></script>
+    <script src="lib/p5/addons/p5.sound.min.js"></script>
+
+    <!-- P5.play -->
+    <script src="lib/p5.play.js"></script>
+</head>
+<body>
+    
+    <!-- Post-Capitalism Scripts -->
+    <script src="index.js"></script>
+</body>
+</html>
+```
+
+Open `index.js` and paste the following:
+```
+/**
+    * Global variables
+    * - Keep track of values
+    */
+
+// Width of browser window
+const width = window.innerWidth;
+// Height of browser window
+const height = window.innerHeight;
+
+/**
+    * Setup function
+    * - Runs once at the start
+    * - Initialize things
+    */
+function setup() {
+        // Create a P5 canvas
+    createCanvas(width, height);
+        background(55);
+}
+
+/**
+    * Draw function
+    * - Runs statements in order once per frame
+    * - Default frameRate is 60fps
+    */
+function draw() {
+    // statements
+}
+```
+
+`npm start`
