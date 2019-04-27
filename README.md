@@ -158,7 +158,7 @@ function draw() {
 
 `npm i -D live-server`
 
-`touch server.js index.js index.html style.css lib`
+`touch server.js index.js index.html style.css lib`  
 Download [**P5.js**](https://p5js.org/download/) and [**P5.play**](http://molleindustria.github.io/p5.play/) libraries and put into `lib` directory.
 
 Open `server.js` and paste the following:
