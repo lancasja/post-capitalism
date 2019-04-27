@@ -11,7 +11,7 @@ Run `node -v` to check if you have [node.js](https://nodejs.org/en/) installed. 
 Open a terminal and run:
 
 1. `npm i` to install dependencies
-2. `npm start:dev` to start server and load browser
+2. `npm start` to start server and load browser
 
 The server will watch your files and automatically reload the browser when you save a file.
 
