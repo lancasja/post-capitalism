@@ -50,8 +50,10 @@ function setup() {
             random(-height, sceneHeight + height)
         );
 
-        //cycles through rocks 0 1 2
+        // Add rock assets
         rock.addAnimation('normal', `assets/rocks${i % 3}.png`);
+
+        // Add to background group (can only add sprites to groups)
         bg.add(rock);
     }
 }
