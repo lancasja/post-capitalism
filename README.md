@@ -13,4 +13,4 @@ Open a terminal and run:
 
 The main file to edit is `index.js`.
 
-If everything is working you'll see a green square on the screen.
+If everything is working you'll see a colored square on the screen.
