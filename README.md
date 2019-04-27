@@ -11,6 +11,8 @@ Open a terminal and run:
 1. `npm i` to install dependencies
 2. `npm start:dev` to start server and load browser
 
+The server will watch your files and automatically reload the browser when you save a file.
+
 The main file to edit is `index.js`.
 
 If everything is working you'll see a colored square on the screen.
